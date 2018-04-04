@@ -16,9 +16,9 @@
     <link type="text/css" href="css/poshytipAndmCustomScrollbar.min.css" rel="stylesheet">
     <link type="text/css" href="css/jzcusstyle.css" rel="stylesheet">
     
-
+    
     <style>
-        ul,li{
+        ul,li,h3{
             margin: 0;
             padding: 0;
         }
@@ -28,128 +28,60 @@
         font{
             color: #0096e6;
         }
-        .p1{ text-align: center; font-size:30px; color:#333;}
-        .p2{ text-align: center;}
-        .data_con{width:1200px; height:410px; margin-top: 50px;}
-        .data_con aside{ width:500px; height:410px; float:left;}
-        .data_con aside ul{ position:relative;}
-        .data_con .dataList{
+        h3{
+            font-weight: 400;
+        }
+        .clearfix:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+  
+       
+        .newList li img,.newList li div{
             float: left;
-            margin-left: 70px;
-            margin-top: 30px;
         }
-        .data_con .dataList ul li{
-            width: 600px;
-            height: 40px;
-            line-height: 40px;
-            border-radius: 5px;
-            text-indent: 1em;
-            background-color:#ebebeb;
-            margin-bottom: 9px;
+        .newList li img{
+            width: 426px;
+            height:214px;
         }
-        .data_con .dataList ul li a{
-            color: #222;
+        .newList li{
+            margin-bottom: 86px;
         }
-        .data_con .dataList ul li a:hover{
-            color:#f00 ;
-        }
-        .data_con .dataList ul li span{
-            float: right;
-            margin-right: 10px;
-            color: #f00;
-            cursor: pointer;
-        }
-        .uls{
-            width: 620px;
-            height: 480px;
-            overflow: auto;
-        }
-        .noDown{
-            width: 620px;
-            height: 40px;
-            line-height: 40px;
-            border-radius: 10px;
-            background:#ebebeb;
-            margin-top: 30px;
-
-        }
-        .noDown a{
-            font-size: 14px;
-            color: #777;
-            margin-left: 460px;
-        }
-        .noDown a:hover{
-            color: #0D82BE;
-        }
-        /*下载弹出层*/
-        .downloadLayer,.orderLayer{
-            width: 500px;
-            height: 400px;
-            background: #fff;
-            border-radius: 10px;
-            position: fixed;
-            left: 50%;
-            margin-left: -200px;
-            top: 50%;
-            margin-top: -200px;
-            z-index: 20;
-        }
-        .close{
-            position: absolute;
-            top: 15px;
-            right: 15px;
-        }
-        .downloadLayer p{
-            font-size: 24px;
-            color: #5dace7;
-            text-align: center;
-            margin-top: 60px;
-        }
-        .downloadLayer .downBtn{
-            margin-top: 150px;
-        }
-        .downloadLayer .downBtn button,.orderLayer .downBtn button{
-            width: 100px;
-            height: 35px;
-            line-height: 35px;
-            border: none;
-            font-size: 18px;
-            border-radius: 5px;
-            background: #5dace7;
-            color: #fff;
+        .newList li div{
+            width: 668px;
             margin-left: 100px;
-            cursor: pointer;
         }
-        .orderNum,.payHistory{
-            font-size: 24px;
-            color: #5dace7;
-            margin-left: 80px;
-            margin-top: 60px;
+        .newList li div h3{
+            margin-bottom: 10px;
         }
-        .payHistory{
-            margin-top: 80px;
+        .newList li div h3 a{
+            font-size: 32px;
+            color: #333;
         }
-        .orderLayer .downBtn{
-            margin-top: 110px;
+        .newList li div time{
+            font-size: 14px;
+            color: #999;
         }
-        #orderNum{
-            width: 200px;
-            height: 30px;
-            border: 1px solid #ccc;
-            text-indent: 1em;
-            vertical-align: top;
+        .newList li div p{
+            font-size: 18px;
+            color: #666;
+            line-height: 1.5;
+            margin-top: 10px;
         }
-        .zhez{
-            width:100%;
-            height: 100%;
-            background-image: url("img/zhezhao.png");
-            position: fixed;
-            left: 0;;
-            background-size: 100%;
-            position: fixed;
-            top: 0;
-            z-index: 10000000000;
-            display: none;
+        .Pagination{float: right;height: 55px;_height: 45px; line-height: 20px;margin-right: 15px;_margin-right: 5px; color: 
+                    #565656;margin-top: 10px;_margin-top: 20px; clear:both;}
+        .Pagination span{margin-right: 5px;display: block;float: left;margin-left: 5px;}
+        .Pagination span b{padding: 0 2px;}
+        .Pagination div {float:left}
+        .Pagination a{ font-size: 12px;text-decoration: none;display: block;float: left;color: #565656;border: 1px solid #cacaca;height: 20px;line-height: 20px;padding: 0 10px;margin: 0 2px;}
+        .Pagination .Ellipsis {line-height: 32px;overflow: hidden; display:none;}
+        cite.FormNum{display: block;float: left;line-height: 20px;height: 20px; font-style: normal; padding-left:10px;}
+        #PageNum{ color:#777;width: 30px;height: 20px;line-height: 20px; border: 1px solid #cacaca; margin:0 5px; text-align:center;}
+        .Pagination a:hover,.Pagination a.PageCur{background-color: #ee6600;border: 1px solid #d64c01;color: #ffffff; }
+
+        #module404{
+            height: auto !important
         }
     </style>
 
@@ -353,19 +285,18 @@
                                                                         <div class="itemCenter"><a hidefocus="true"
                                                                                                    style="outline:none;"
                                                                                                    href=""
-                                                                            
                                                                                                    onclick="return false;"><span
                                                                                 class="itemName0">背调服务</span></a></div>
                                                                     </div>
                                                                     <div class="itemSep"></div>
                                                                     <div title="" id="nav10"
-                                                                    class="item itemCol103 itemIndex2" colid="103"
-                                                                    onclick="window.open('news.html', '_self')">
-                                                                   <div class="itemCenter"><a hidefocus="true"
-                                                                                              style="outline:none;"
-                                                                                              href=""
-                                                                                              onclick="return false;"><span
-                                                                           class="itemName0">媒体新闻</span></a></div>
+                                                                         class="item itemCol103 itemIndex2 itemSelected itemSelectedIndex5" colid="103"
+                                                                         onclick="window.open('service.html', '_self')">
+                                                                        <div class="itemCenter"><a hidefocus="true"
+                                                                                                   style="outline:none;"
+                                                                                                   href=""
+                                                                                                   onclick="return false;"><span
+                                                                                class="itemName0">媒体新闻</span></a></div>
                                                                     </div>
                                                                     <div class="itemSep"></div>
                                                                     <div title="" id="nav104"
@@ -387,10 +318,11 @@
                                                                                                    onclick="return false;"><span
                                                                                 class="itemName0">关于我们</span></a></div>
                                                                     </div>
+
                                                                     <div class="itemSep"></div>
                                                                     <div title="" id="nav107"
-                                                                         class="item itemCol106 itemIndex4 itemSelected itemSelectedIndex5" colid="106"
-                                                                         onclick="window.open('about.html', '_self')">
+                                                                         class="item itemCol106 itemIndex4 " colid="106"
+                                                                         onclick="window.open('dataReport.html', '_self')">
                                                                         <div class="itemCenter"><a hidefocus="true"
                                                                                                    style="outline:none;"
                                                                                                    href="about.html"
@@ -498,11 +430,11 @@
              class="fullmeasureContainer forms fk-fullmeasureForms fullmeasureForms fullmeasureTopForms">
             <div id="module404" _indexclass="formIndex1" _moduletype="1" _modulestyle="80" _moduleid="404"
                  class="form form404 formIndex1 formStyle80 fk-formFullmeasure " title="" _sys="0" _banid=""
-                 style="height: 860px;" _side="0" _intab="0" _inmulmcol="0" _infullmeasure="0" _inpack="0"
+                  _side="0" _intab="0" _inmulmcol="0" _infullmeasure="0" _inpack="0" 
                  _inpopupzone="0" _autoheight="0" _global="false" _independent="false" fmslidestyle="0" fmpage="1"
                  iscarousel="0" displaytime="4" carouselspeed="1" cuscarousel="0">
                 <div class="fillContentRelative"
-                     style="position: relative; z-index: -1; height: 1580px; width: 100%; display: none;"></div>
+                     style="position: relative; z-index: -1;  width: 100%; display: none;"></div>
                 <div style="position: static;"
                      class="fullmeasureOuterContentPage fullmeasureOuterContentPage1 J_fullmeasurePageShow" page="1">
                     <div class="fullmeasureOuterContentBg fullmeasureOuterContentBg404 fullmeasureStyle0"></div>
@@ -510,36 +442,115 @@
                         <div class="fullmeasureContent fullmeasureContent404" id="fullmeasureContent404_1"
                              moduleid="404">
                             <section style="margin-top: 50px">
-                                <p class="p1">数据<font>报告</font></p>
-                                <p class="p2">Data report</p>
-                                <p class="p3"></p>
-                                <div class="data_con">
-                                    <aside>
-                                        <img src="img/data_aside.png" alt="">
-                                    </aside>
-                                    <div class="dataList">
-                                        <div class="uls">
-                                            <ul>
-                                                <li id="report1"><a href="javascript:;">“五险一金”专题问答大汇总</a><span>(查看收费一元)</span></li>
-                                                <li id="report2"><a href="javascript:;">公司员工年终奖考核办法</a><span>(查看收费一元)</span></li>
-                                                <li id="report3"><a href="javascript:;">绩效考核方案与年终奖发放办法</a><span>(查看收费一元)</span></li>
-                                                <li id="report4"><a href="javascript:;">年末如何进行压力管理</a><span>(查看收费一元)</span></li>
-                                                <li id="report5"><a href="javascript:;">年终HR：你拿什么标准来调薪</a><span>(查看收费一元)</span></li>
-                                                <li id="report6"><a href="javascript:;">年终绩效考评及面谈技巧</a><span>(查看收费一元)</span></li>
-                                                <li id="report7"><a href="javascript:;">人力资源总监工具书《人才招聘面试题库》</a><span>(查看收费一元)</span></li>
-                                                <li id="report8"><a href="javascript:;">如何成功进行年度调薪方案设计（攻略分享）</a><span>(查看收费一元)</span></li>
-                                                <li id="report9"><a href="javascript:;">如何在跳槽高峰留住核心人才</a><span>(查看收费一元)</span></li>
-                                                <li id="report10"><a href="javascript:;">薪酬福利管理</a><span>(查看收费一元)</span></li>
-                                                <li id="report11"><a href="javascript:;">薪酬激励体系</a><span>(查看收费一元)</span></li>
-                                                <li id="report12"><a href="javascript:;">薪酬设计方案</a><span>(查看收费一元)</span></li>
-                                                <li id="report13"><a href="javascript:;">用绩效管理留住你的骨干员工</a><span>(查看收费一元)</span></li>
-                                                <li id="report14"><a href="javascript:;">员工绩效评价表大合集</a><span>(查看收费一元)</span></li>
-                                                <li id="report15"><a href="javascript:;">年终绩效考核方案</a><span>(查看收费一元)</span></li>
+                                <div class="newslist">
+                                        <ul class="newList">
+                                                <li class="clearfix">
+                                                    <img src="./img/news1.jpg" alt="">
+                                                    <div>
+                                                        <h3><a href="http://zj.qq.com/a/20180402/013053.htm">易职信—国内首款在线实时核验应聘人员职业背景信息的平台</a></h3>
+                                                        <time>2018-04-02 10:34</time>
+                                                        <p>入职背景调查，在中国还算是一个新兴的概念。相较于欧美专业化的员工入职调查流程，中国在防范劳动用工风险方面还处于初级阶段。</p>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <img src="./img/news2.png" alt="">
+                                                    <div>
+                                                        <h3><a href="http://www.cucnews.com/news/shh/2018-03-22/41538.html">易职信：互联网+时代背调革命 致力于打造职场信征体系</a></h3>
+                                                        <time>2018-03-22 15:34:17</time>
+                                                        <p>2北京风影职信全力打造的职场征信体系的线上背调APP——易职信的最新版本已经上线。易职信诞生旨在为“互联网+”时代的人才市场带来一场招聘革命。</p>
+                                                    </div>
+                                                </li>
+                                                 <li class="clearfix">
+                                                    <img src="./img/news3.jpg" alt="">
+                                                    <div>
+                                                        <h3><a href="http://www.ceweekly.cn/2018/0117/216331.shtml">线上背调产品易职信荣获效率办公产品奖，是如何做到的？</a></h3>
+                                                        <time>2018-01-17 15:33</time>
+                                                        <p>2018年1月12日,上榜科技在北京举办了首届移动互联网营销峰会,据笔者所知,上榜科技是一家专注于移动APP营销的互联网企业,此次举办移动互联网营销峰会是为了发展产业互助社群</p>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <img src="./img/news4.png" alt="">
+                                                    <div>
+                                                        <h3><a href="http://nb.ifeng.com/a/20180126/6338428_0.shtml">企业HR福音，线上背调神器-易职信，结束简历造假时代！</a></h3>
+                                                        <time>2018年01月26日 18:40</time>
+                                                        <p>本文主体内容来自笔者对话易职信的ＣＥＯ张进军，在采访张进军的时候印象最深刻的就是：“我们易职信致力于打造职场征信体系”。</p>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix">
+                                                        <img src="./img/news5.jpg" alt="">
+                                                        <div>
+                                                            <h3><a href="http://www.chinaz.com/news/2018/0129/853654.shtml">利用互联网转型创新，传统人力资源行业也该觉醒了</a></h3>
+                                                            <time>2018-01-29 16:19</time>
+                                                            <p>如今最火的社会化营销案例，江小白当属头条，人们现在喝的已经不再是单纯的酒了，而是情怀和生活态度。“互联网+酒”的融合和创新，使传统白酒行业避过了寒冬，品牌热点带来了无限流量，并且未来也将蕴藏无限潜力。</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <img src="./img/news6.jpg" alt="">
+                                                        <div>
+                                                            <h3><a href="http://dy.163.com/v2/article/detail/DBQQG88G0519E46G.html">你知道的背景调查，真的是HR在做吗？</a></h3>
+                                                            <time>2018-03-01 </time>
+                                                            <p>每年招聘热季,各路段子手们就纷纷出山,这里收集了一年来HR们面试时提出的各种问题,“热心肠”的段子手们将问题,进行了深入剖析与研究后,发现这一堆的面试问题,全tm是套路呀!</p>
+                                                        </div>
+                                                    </li>
+                                                     <li class="clearfix">
+                                                        <img src="./img/news7.jpg" alt="">
+                                                        <div>
+                                                            <h3><a href="">易职信荣获2017年移动互联网营销峰会暨金榜奖 “最具办公效率奖”</a></h3>
+                                                            <time>2018-01-19 10:31:00</time>
+                                                            <p>2018年1月12日,北京风影职信科技有限公司受邀出席2017年移动互联网营销峰会暨金榜奖颁奖盛典,旗下产品【易职信】荣获“年度最具办公效率奖”。</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <img src="./img/news8.jpg" alt="">
+                                                        <div>
+                                                            <h3><a href="https://www.sohu.com/a/215823926_203348">招聘有麻烦？易职信，让简历更加真实！</a></h3>
+                                                            <time>2018-01-10 19:00</time>
+                                                            <p>随着2017毕业大军“涌入”人力市场，各大企业纷纷抛出橄榄枝只搏人才一留，但据央视的调查显示，2017年的招聘普遍存在招聘耗时长，入职后发现岗位与员工性格不匹配等问题。</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <img src="./img/news9.jpg" alt="">
+                                                        <div>
+                                                            <h3><a href="https://www.toutiao.com/i6538285077741175300/">关系再好，也不能跟同事说的三句话！</a></h3>
+                                                            <time>2018-03-29 16:45:23</time>
+                                                            <p>职场如战场，千万别以为你和你的同事的关系好，就什么话都可以说，有些话说出来，你自己可能觉得没什么，感觉大家都是同事，没有啥不能说的。但是你不知道你同事是否也是这样想的，如果哪天你们之间有冲突了</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <img src="./img/news10.jpg" alt="">
+                                                        <div>
+                                                            <h3><a href="https://www.sohu.com/a/220514951_240996">易职信举办产品线下研讨会</a></h3>
+                                                            <time>2018-02-02 14:50</time>
+                                                            <p>2018年１月27日，易职信召开了关于易职信ＡＰＰ的产品研讨会，邀请了相关人力资源方面人员进行现场研讨ＡＰＰ使用，从不同企业的ＨＲ方面了解到更多用户需求。</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <img src="./img/news11.jpg" alt="">
+                                                        <div>
+                                                            <h3><a href="https://zhuanlan.zhihu.com/p/35024872">职场新人都容易犯哪些忌讳？</a></h3>
+                                                            <time>2018.01.02 11:40</time>
+                                                            <p>是人都犯错，尤其是新人。老话讲到什么山头唱什么歌，只是有时候新人的“转移”速度稍微慢了些，可能就犯了职场的忌讳。今天为大家带来职友所总结的六条易错点，供大家参考。</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <img src="./img/news12.jpg" alt="">
+                                                        <div>
+                                                            <h3><a href="http://baijiahao.baidu.com/builder/preview/s?id=1596602892551707579">做好职前背调 为企业招聘防范于未然</a> </h3>
+                                                            <time>2018-04-0211:20</time>
+                                                            <p>在21世纪互联网经济高速发展的今天，人才参差不齐，分流严重，企业招揽人才风险也随之增大。因简历造假给企业造成重大损失的事情不胜枚举</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <img src="./img/news13.jpg" alt="">
+                                                        <div>
+                                                            <h3><a href="https://mp.weixin.qq.com/s?__biz=MzI5Nzk3NjE3NA==&mid=2247483796&idx=2&sn=6214162e34c4e65c69f17e9d733d98fc&chksm=ecada995dbda208381ce832c00d16bff22cd5ca6e04a286068f9bca2ffc84704c18eacee3ead#rd">易职信：为打造国内诚信职业信用环境而生的背调神器</a> </h3>
+                                                            <time>2018-03-08</time>
+                                                            <p>据《2017中国职场诚信调研招聘报告》显示中国职场诚信现状不佳,其中职场失信重灾区在招聘阶段</p>
+                                                        </div>
+                                                    </li>
                                             </ul>
-                                        </div>
-                                        <p class="noDown"><a href="javascript:;">支付成功未下载报告？</a></p>
-                                    </div>
                                 </div>
+                               
                             </section>
                             <!--弹出层-->
                             <div class="downloadLayer" style="display: none">
@@ -1136,9 +1147,15 @@
 <script type="text/javascript" src="js/jquery-ui-core.min.js"></script>
 <script type="text/javascript" src="js/site.min.js"></script>
 <script type="text/javascript" src="js/dataReport.js"></script>
-
+<script type="text/javascript" src="js/jquery.kkPages.js"></script>
 <link type="text/css" href="css/fontsIco.min.css" rel="stylesheet">
-
+<script>
+        $('.newslist').kkPages({ 
+            PagesClass:'li', //需要分页的元素
+            PagesMth:5, //每页显示个数 
+            PagesNavMth:5 //显示导航个数
+         });
+</script>
 <script type="text/javascript">
 
     Fai.top = window;
