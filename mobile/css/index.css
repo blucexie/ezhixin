@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Microsoft YaHei";
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.header {
+  padding-top: 0.1px;
+  height: 13.4rem;
+  background: url(../img/header-bg.png) no-repeat;
+  background-size: 15rem 11.04rem;
+}
+.headerTitle {
+  margin-top: 1.7rem;
+  display: flex;
+  justify-content: center;
+}
+.logo > img,
+.logo .companyName {
+  float: left;
+}
+.logo > img {
+  width: 2.82rem;
+  margin-right: 0.52rem;
+}
+.companyName h1 {
+  font-weight: 400;
+  font-size: 1.32rem;
+  color: #fff;
+  text-align: center;
+}
+.companyName > p {
+  font-size: 0.8rem;
+  color: #fff;
+}
+.purpose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+.purpose > span {
+  font-size: 0.84rem;
+  color: #fff;
+  margin: 0 0.32rem;
+}
+.purpose i {
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 50%;
+  background: #fff;
+}
+.login {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.76rem;
+}
+.login a {
+  width: 3.92rem;
+  height: 1.32rem;
+  line-height: 1.32rem;
+  font-size: 0.8rem;
+  border-radius: 0.12rem;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #fff;
+}
+.login a:nth-of-type(1) {
+  color: #333;
+  background: #fff;
+  margin-right: 0.4rem;
+}
+.login a:nth-of-type(2) {
+  color: #fff;
+}
+.companyProfile {
+  display: flex;
+  justify-content: center;
+  width: 12.68rem;
+  height: 5.32rem;
+  background: url(../img/companyProfile-bg.png) no-repeat;
+  background-size: 12.68rem 5.32rem;
+  margin: 0.6rem auto 0;
+}
+.companyProfile > p {
+  width: 10.6rem;
+  font-size: 0.52rem;
+  color: #666;
+  margin-top: 1rem;
+}
+/* section1 */
+.section1 {
+  margin-top: 0.8rem;
+}
+.section1_title,
+.section2_title,
+.section3_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+.section1_title > span,
+.section2_title > span,
+.section3_title > span {
+  font-size: 0.64rem;
+  color: #000;
+  margin: 0 0.28rem;
+  font-weight: bold;
+}
+.section1_title > img,
+.section2_title > img,
+.section3_title > img {
+  width: 0.38rem;
+  height: 0.34rem;
+}
+.section1_list > div {
+  position: relative;
+  float: left;
+  width: 6.64rem;
+  height: 5.64rem;
+  box-shadow: 0px 7px 23px rgba(140, 140, 140, 0.2);
+  margin-bottom: 0.4rem;
+}
+.section1_list > div:nth-child(odd) {
+  margin-right: 0.28rem;
+  margin-left: 0.66rem;
+}
+.section1_list > div > span,
+.section1_list > div > img,
+.section1_list > div > h3,
+.section1_list > div > p {
+  position: absolute;
+}
+.section1_list > div > span {
+  font-size: 0.92rem;
+  color: #efefef;
+  top: 0.2rem;
+  left: 0.4rem;
+  font-weight: bold;
+}
+.section1_list > div > img {
+  width: 1.12rem;
+  top: 0;
+  left: 50%;
+  margin-left: -0.56rem;
+}
+.section1_list > div > h3 {
+  font-size: 0.56rem;
+  color: #333;
+  top: 1.52rem;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 5rem;
+  text-align: center;
+}
+.section1_list > div > p {
+  font-size: 0.52rem;
+  color: #666;
+  padding: 0 0.4rem;
+  top: 2.4rem;
+  text-align: justify;
+}
+/* section2 */
+.section2 {
+  position: relative;
+  background: #f8f8f8;
+  padding-bottom: 1rem;
+}
+.sectionBottomIcon {
+  width: 0.96rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.48rem;
+  bottom: -0.36rem;
+}
+.section2_title {
+  padding-top: 0.8rem;
+  margin-bottom: 1.06rem;
+}
+.section2 ul li {
+  float: left;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.section2 ul li > img {
+  width: 3.62rem;
+}
+.section2 ul li:nth-child(odd) img,
+.section2 ul li:nth-child(odd) p {
+  margin-left: 1rem;
+}
+.section2 ul li:nth-child(even) img,
+.section2 ul li:nth-child(even) p {
+  margin-right: 1rem;
+}
+.section2 ul li > p {
+  font-size: 0.56rem;
+  color: #333;
+}
+.note {
+  position: relative;
+  width: 11.44rem;
+  text-align: center;
+  padding-bottom: 0.4rem;
+  border: 1px solid #00adb4;
+  padding: 1rem 0;
+  margin: 0.84rem auto 0;
+}
+.noteRadioIcon {
+  position: absolute;
+  width: 0.92rem;
+  height: 0.92rem;
+  border-radius: 50%;
+  background: #00adb4;
+  left: 50%;
+  margin-left: -0.46rem;
+  bottom: -0.46rem;
+}
+.note > p {
+  font-size: 0.52rem;
+  color: #666;
+  padding: 0 0.3rem;
+}
+.note > img {
+  width: 1.16rem;
+  position: absolute;
+  top: -0.58rem;
+  left: 50%;
+  margin-left: -0.58rem;
+}
+/* section3 */
+.section3 {
+  padding-top: 0.8rem;
+}
+.section3 ul {
+  display: flex;
+  justify-content: space-around;
+}
+.section3 ul li {
+  float: left;
+  width: 4.28rem;
+  height: 9.6rem;
+  text-align: center;
+  margin-right: 0.4rem;
+  box-shadow: 0px 7px 23px rgba(140, 140, 140, 0.2);
+}
+.section3 ul li:nth-of-type(1) {
+  margin-left: 0.6rem;
+}
+.section3 ul li > img {
+  width: 2.82rem;
+  margin-top: 0.56rem;
+}
+.section3 ul li > h3 {
+  font-size: 0.56rem;
+  color: #666;
+  margin-top: 0.2rem;
+}
+.section3 ul li > span {
+  display: block;
+  width: 0.9rem;
+  height: 0.08rem;
+  background: #00adb4;
+  margin: 0.26rem auto;
+  border-radius: 0.1rem;
+}
+.section3 ul li > p {
+  font-size: 0.48rem;
+  color: #666;
+  padding: 0 0.28rem;
+  text-align: justify;
+}
+/* footer */
+.footer {
+  background: url(../img/footer-bg.png) no-repeat;
+  background-size: 15rem 9.4rem;
+  padding-top: 2.92rem;
+  margin-top: 1rem;
+}
+.contactInformation {
+  margin-top: 0.76rem;
+  padding-bottom: 0.4rem;
+}
+.contactInformation > img {
+  float: left;
+  width: 2.74rem;
+  margin-left: 0.7rem;
+  margin-right: 0.48rem;
+}
+.contactInformation > div {
+  float: left;
+}
+.contactInformation > div > p {
+  font-size: 0.48rem;
+  color: #fff;
+  margin-bottom: 0.08rem;
+}
